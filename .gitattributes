@@ -1,0 +1,5 @@
+# Prevent vendor code affecting project's language stats,
+# This file is not necessary, but more for a better GitHub repository summary.
+# See more on GitHub Linguist documentation:
+# https://github.com/github/linguist/blob/master/docs/overrides.md#vendored-code
+src/vendors linguist-vendored

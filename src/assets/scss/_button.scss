@@ -1,0 +1,53 @@
+button {
+  width: 100%;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.25rem;
+  outline: none;
+}
+
+button.plain-button {
+  padding: 1rem;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+button.button {
+  padding: 1rem;
+  border: 0.0625rem solid;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  background-color: transparent;
+  font-size: 1.25rem;
+  font-family: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  color: $color-input-control-text;
+  background-color: $color-input-control-background;
+
+  &:hover {
+    color: $color-input-control-text-active;
+    background-color: $color-input-control-background-active;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.85;
+  }
+}

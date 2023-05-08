@@ -1,0 +1,25 @@
+select {
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  background-color: transparent;
+  color: $color-input-control-text;
+  border: 0.0625rem solid;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+
+  option {
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+
+    &:checked {
+      background-color: $color-input-control-background-active;
+      color: $color-input-control-text-active;
+    }
+  }
+}

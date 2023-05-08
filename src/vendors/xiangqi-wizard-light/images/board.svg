@@ -1,0 +1,62 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 521 577" width="521" height="577">
+	<title>board</title>
+	<style>
+		.s0 { fill: none;stroke: #654f4c;stroke-width: 4 } 
+		.s1 { fill: none;stroke: #654f4c;stroke-width: 2 } 
+		.s2 { fill: #654f4c } 
+	</style>
+	<rect width="521" height="577" id="Color Fill 1" style="fill: #ede8e0"/>
+	<path id="Shape 1 copy" class="s0" d="m26 25h469v527h-469z"/>
+	<path id="Shape 2 copy" class="s1" d="m32 31h457v515h-457z"/>
+	<path id="Shape 4" class="s2" d="m431 318h1v227h-1z"/>
+	<path id="Shape 4 copy 11" class="s2" d="m374 318h1v227h-1z"/>
+	<path id="Shape 4 copy 9" class="s2" d="m317 318h1v227h-1z"/>
+	<path id="Shape 4 copy 7" class="s2" d="m260 318h1v227h-1z"/>
+	<path id="Shape 4 copy 5" class="s2" d="m203 318h1v227h-1z"/>
+	<path id="Shape 4 copy 3" class="s2" d="m146 318h1v227h-1z"/>
+	<path id="Shape 4 copy" class="s2" d="m89 318h1v227h-1z"/>
+	<path id="Shape 4 copy 12" class="s2" d="m431 32h1v227h-1z"/>
+	<path id="Shape 4 copy 13" class="s2" d="m374 32h1v227h-1z"/>
+	<path id="Shape 4 copy 15" class="s2" d="m317 32h1v227h-1z"/>
+	<path id="Shape 4 copy 17" class="s2" d="m260 32h1v227h-1z"/>
+	<path id="Shape 4 copy 19" class="s2" d="m203 32h1v227h-1z"/>
+	<path id="Shape 4 copy 21" class="s2" d="m146 32h1v227h-1z"/>
+	<path id="Shape 4 copy 23" class="s2" d="m89 32h1v227h-1z"/>
+	<path id="Shape 3" class="s2" d="m33 488h455v1h-455z"/>
+	<path id="Shape 3 copy" class="s2" d="m33 259h455v2h-455z"/>
+	<path id="Shape 3 copy 4" class="s2" d="m33 316h455v2h-455z"/>
+	<path id="Shape 3 copy 3" class="s2" d="m33 88h455v1h-455z"/>
+	<path id="Shape 3 copy 7" class="s2" d="m33 145h455v1h-455z"/>
+	<path id="Shape 3 copy 6" class="s2" d="m33 202h455v1h-455z"/>
+	<path id="Shape 3 copy 5" class="s2" d="m33 374h455v1h-455z"/>
+	<path id="Shape 3 copy 2" class="s2" d="m33 431h455v1h-455z"/>
+	<path id="Shape 5" class="s2" d="m317.6 30.6l0.8 0.8-114 114-0.8-0.8z"/>
+	<path id="Shape 5 copy 2" class="s2" d="m203.6 32.4l0.8-0.8 114 114-0.8 0.8z"/>
+	<path id="Shape 5 copy 6" class="s2" d="m203.6 432.4l0.8-0.8 114 114-0.8 0.8z"/>
+	<path id="Shape 5 copy 3" class="s2" d="m317.6 430.6l0.8 0.8-114 114-0.8-0.8z"/>
+	<path id="Shape 6" class="s2" d="m85 417h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 2" class="s2" d="m85 131h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy" class="s2" d="m142 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 4" class="s2" d="m142 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 3" class="s2" d="m142 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 6" class="s2" d="m142 360h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 5" class="s2" d="m256 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 8" class="s2" d="m256 360h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 7" class="s2" d="m370 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 10" class="s2" d="m370 360h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 14" class="s2" d="m142 360h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 15" class="s2" d="m256 360h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 16" class="s2" d="m370 360h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 11" class="s2" d="m142 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 12" class="s2" d="m256 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 13" class="s2" d="m370 188h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 9" class="s2" d="m427 417h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 19" class="s2" d="m85 131h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 20" class="s2" d="m427 131h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 17" class="s2" d="m85 131h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 6 copy 18" class="s2" d="m427 131h2v12h-2zm-10 10h12v2h-12zm17-10h2v12h-2zm0 10h12v2h-12zm-17 7h12v2h-12zm10 2h2v10h-2zm7-2h2v12h-2zm0 0h12v2h-12z"/>
+	<path id="Shape 7" class="s2" d="m35 188h2v12h-2zm1 10h11v2h-11zm-1 7h2v12h-2zm1 0h11v2h-11z"/>
+	<path id="Shape 11" class="s2" d="m484 188h2v12h-2zm-10 10h12v2h-12zm0 7h11v2h-11zm10 0h2v12h-2z"/>
+	<path id="Shape 15" class="s2" d="m474 370h12v2h-12zm10-10h2v10h-2zm-10 17h12v2h-12zm10 2h2v10h-2z"/>
+	<path id="Shape 19" class="s2" d="m35 377h2v12h-2zm2 0h10v2h-10zm-2-17h2v12h-2zm2 10h10v2h-10z"/>
+</svg>

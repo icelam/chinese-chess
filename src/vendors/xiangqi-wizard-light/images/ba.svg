@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57 57" width="57" height="57">
+	<title>ba</title>
+	<defs>
+		<filter x="-50%" y="-50%" width="200%" height="200%" id="f1" ><feDropShadow dx="-0.8660254037844387" dy="0.49999999999999994" stdDeviation="0.4166666666666667" flood-color="#000000" flood-opacity=".2"/></filter>
+	</defs>
+	<style>
+		.s0 { filter: url(#f1);fill: #ffeac9;stroke: #262322;stroke-width: 2 } 
+		.s1 { fill: #ffeac9;stroke: #262322;stroke-width: 2 } 
+		.s2 { fill: #262322 } 
+	</style>
+	<g id="ba">
+		<path id="Shape 1 copy 2" class="s0" d="m28.5 53c-13.5 0-24.5-10.9-24.5-24.5 0-13.5 11-24.5 24.5-24.5 13.6 0 24.5 11 24.5 24.5 0 13.6-10.9 24.5-24.5 24.5z"/>
+		<path id="Shape 1" class="s1" d="m28.6 49.4c-11.5 0-20.8-9.3-20.8-20.8 0-11.5 9.3-20.8 20.8-20.8 11.5 0 20.8 9.3 20.8 20.8 0 11.5-9.3 20.8-20.8 20.8z"/>
+		<path id="士" class="s2" d="m35.6 25.1h-5.4v-8.3c0.8-0.1 1-0.4 1-0.8l-4.4-0.4v9.5h-10.6l0.2 0.8h10.4v12.3h-9.2l0.2 0.8h21.1c0.4 0 0.7-0.2 0.8-0.5-1.3-1.1-3.5-2.8-3.5-2.8l-1.9 2.5h-4.1v-12.3h10c0.4 0 0.7-0.2 0.8-0.5-1.3-1.1-3.5-2.8-3.5-2.8z"/>
+	</g>
+</svg>

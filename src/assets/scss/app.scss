@@ -1,0 +1,92 @@
+// Variables
+$chess-board-width: 521;
+@import './shared/colors';
+
+// Components
+@import './fonts';
+@import './button';
+@import './checkbox';
+@import './select';
+@import './headings';
+
+*:not(input, textarea, select) {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+* {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  // Prevent firefox to load dark scrollbar due to dark background, only works on Firefox
+  scrollbar-color: $color-app-text $color-app-background !important;
+}
+
+body {
+  padding: 1rem;
+  font-family: 'source-han-serif-hong-kong', sans-serif;
+  background-color: $color-app-background;
+  color: $color-app-text;
+}
+
+#main {
+  max-width: $chess-board-width * 1px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 570px) {
+  #responsiveContainer {
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  #chessboard {
+    transform-origin: top left;
+  }
+}
+
+#controls {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  background-color: $color-control-background;
+  border-radius: 0.25rem;
+  color: $color-control-group-text;
+}
+
+#gameOptions {
+  text-align: center;
+}
+
+#settings {
+  margin: 1rem 0;
+
+  .fieldset {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+
+    .field {
+      margin-bottom: 1rem;
+    }
+
+    .field-label {
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+
+    select {
+      overflow: hidden;
+    }
+  }
+}

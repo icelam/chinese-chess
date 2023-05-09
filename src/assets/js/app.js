@@ -1,4 +1,5 @@
-/* global BOARD_WIDTH, BOARD_HEIGHT */
+/* global BOARD_WIDTH, BOARD_HEIGHT, restart_click, set_enable_sound, set_enable_animation */
+import dialogPolyfill from 'dialog-polyfill';
 
 // Import vendor files using raw loader configured in webpack
 import bookScript from '@vendors/xiangqi-wizard-light/book';
@@ -11,6 +12,7 @@ import initScript from '@vendors/xiangqi-wizard-light/init';
 // Normal import
 import { injectScript, debounce } from '@js/utils';
 
+// Inject legacy libraries which has functions created under global namespace to body
 [
   bookScript,
   positionScript,
@@ -23,6 +25,7 @@ import { injectScript, debounce } from '@js/utils';
   injectScript(scriptContent);
 });
 
+// Force chessboard to be responsive
 const resizeChessboard = () => {
   const padding = 16;
   const screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
@@ -44,3 +47,71 @@ const resizeChessboard = () => {
 
 window.addEventListener('resize', debounce(resizeChessboard, 250));
 resizeChessboard();
+
+// Chessboard Settings
+const chessboardSettingsButton = document.getElementById('chessboard-settings-button');
+const chessboardSettingsModal = document.getElementById('chessboard-settings-modal');
+const chessboardSettingsModalOklButton = document.getElementById('chessboard-settings-modal-ok-button');
+const chessboardSettingsModalCancelButton = document.getElementById('chessboard-settings-modal-cancel-button');
+
+const moveModeSelect = document.getElementById('selMoveMode');
+const handicapSelect = document.getElementById('selHandicap');
+const levelSelect = document.getElementById('selLevel');
+
+let previousMoveModeIndex = 0;
+let previousHandicapIndex = 0;
+let previousLevelIndex = 0;
+
+dialogPolyfill.registerDialog(chessboardSettingsModal);
+
+chessboardSettingsButton.addEventListener('click', () => {
+  chessboardSettingsModal.showModal();
+  moveModeSelect.blur();
+});
+
+chessboardSettingsModalCancelButton.addEventListener('click', () => {
+  moveModeSelect.selectedIndex = previousMoveModeIndex;
+  handicapSelect.selectedIndex = previousHandicapIndex;
+  levelSelect.selectedIndex = previousLevelIndex;
+  chessboardSettingsModal.close();
+});
+
+chessboardSettingsModalOklButton.addEventListener('click', () => {
+  previousMoveModeIndex = moveModeSelect.selectedIndex;
+  previousHandicapIndex = handicapSelect.selectedIndex;
+  previousLevelIndex = levelSelect.selectedIndex;
+  restart_click();
+  chessboardSettingsModal.close();
+});
+
+// Effect Settings
+const effectSettingsButton = document.getElementById('effect-settings-button');
+const effectSettingsModal = document.getElementById('effect-settings-modal');
+const effectSettingsModalOklButton = document.getElementById('effect-settings-modal-ok-button');
+const effectSettingsModalCancelButton = document.getElementById('effect-settings-modal-cancel-button');
+
+const animatedCheckbox = document.getElementById('animatedCheckbox');
+const soundEnabledCheckbox = document.getElementById('soundEnabledCheckbox');
+
+let wasAnimated = true;
+let wasSoundEnabled = true;
+
+dialogPolyfill.registerDialog(effectSettingsModal);
+
+effectSettingsButton.addEventListener('click', () => {
+  effectSettingsModal.showModal();
+});
+
+effectSettingsModalCancelButton.addEventListener('click', () => {
+  animatedCheckbox.checked = wasAnimated;
+  soundEnabledCheckbox.checked = wasSoundEnabled;
+  effectSettingsModal.close();
+});
+
+effectSettingsModalOklButton.addEventListener('click', () => {
+  wasAnimated = animatedCheckbox.checked;
+  wasSoundEnabled = soundEnabledCheckbox.checked;
+  set_enable_animation(animatedCheckbox.checked);
+  set_enable_sound(soundEnabledCheckbox.checked);
+  effectSettingsModal.close();
+});

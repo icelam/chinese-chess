@@ -120,8 +120,6 @@ function Board(container, images, sounds) {
   this.flushBoard();
 }
 
-console.log
-
 Board.prototype.playSound = function(soundFile) {
   if (!this.sound) {
     return;

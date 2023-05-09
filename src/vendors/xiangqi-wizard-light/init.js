@@ -42,15 +42,12 @@ function level_change() {
 }
 
 function restart_click() {
-  let text = "棋局將會被重設。";
-  if (!confirm(text)) {
-    return;
-  }
-
   selMoveList.options.length = 1;
   selMoveList.selectedIndex = 0;
   board.computer = 1 - selMoveMode.selectedIndex;
   board.restart(STARTUP_FEN[selHandicap.selectedIndex]);
+  board.millis = Math.pow(10, selLevel.selectedIndex + 1);
+  currentLevel.innerHTML = "電腦水平：" + ["入門", "業餘", "專業"][selLevel.selectedIndex];
 }
 
 function retract_click() {
@@ -63,8 +60,6 @@ function retract_click() {
 }
 
 function moveList_change() {
-  console.log('???', RESULT_UNKNOWN, board.result)
-
   if (board.result == RESULT_UNKNOWN) {
     selMoveList.selectedIndex = selMoveList.options.length - 1;
     return;
@@ -72,31 +67,32 @@ function moveList_change() {
   var from = board.pos.mvList.length;
   var to = selMoveList.selectedIndex;
   if (from == to + 1) {
-    console.log(1)
     return;
   }
   if (from > to + 1) {
     for (var i = to + 1; i < from; i++) {
-      console.log(2)
       board.pos.undoMakeMove();
     }
   } else {
     for (var i = from; i <= to; i++) {
-      console.log(3)
       board.pos.makeMove(parseInt(selMoveList.options[i].value));
     }
   }
   board.flushBoard();
 }
 
-restartButton.addEventListener('click', restart_click);
-saveSettingButton.addEventListener('click', restart_click);
+function set_enable_animation(value) {
+  board.animated = value;
+}
+
+function set_enable_sound(value) {
+  board.setSound(value);
+}
+
+restartButton.addEventListener('click', () => {
+  if (confirm("棋局將會被重設。")) {
+    restart_click();
+  }
+});
 retractButton.addEventListener('click', retract_click);
-selLevel.addEventListener('change', level_change);
-chkAnimated.addEventListener('change', function() {
-  board.animated = this.checked;
-});
-chkSound.addEventListener('change', function() {
-  board.setSound(this.checked);
-});
 selMoveList.addEventListener('change', moveList_change);

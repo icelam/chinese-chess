@@ -1,0 +1,4 @@
+mixin checkbox
+  label.checkbox(for=attributes['id']) #{attributes['label']}
+    input(type="checkbox" class="checkbox" id=attributes['id'] checked)
+    span.checkmark

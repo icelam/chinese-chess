@@ -52,7 +52,8 @@
     "workbox-webpack-plugin": "^6.5.4"
   },
   "dependencies": {
-    "core-js": "^3.30.2"
+    "core-js": "^3.30.2",
+    "dialog-polyfill": "^0.5.6"
   },
   "browserslist": [
     ">0.2%",

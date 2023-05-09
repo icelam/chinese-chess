@@ -44,8 +44,16 @@ module.exports = {
         },
         { from: path.resolve(__dirname, '../src/assets/images/favicon.ico'), to: 'assets/images/favicon.ico' },
         { from: path.resolve(__dirname, '../src/manifest.json'), to: 'manifest.json' },
-        { from: path.resolve(__dirname, '../src/vendors/xiangqi-wizard-light/images'), to: 'vendors/xiangqi-wizard-light/images' },
-        { from: path.resolve(__dirname, '../src/vendors/xiangqi-wizard-light/sounds'), to: 'vendors/xiangqi-wizard-light/sounds' },
+        {
+          from: path.resolve(__dirname, '../src/vendors/xiangqi-wizard-light/images'),
+          to: 'vendors/xiangqi-wizard-light/images',
+          globOptions: { ignore: ['**/.DS_Store'] }
+        },
+        {
+          from: path.resolve(__dirname, '../src/vendors/xiangqi-wizard-light/sounds'),
+          to: 'vendors/xiangqi-wizard-light/sounds',
+          globOptions: { ignore: ['**/.DS_Store'] }
+        }
       ]
     }),
     new HtmlWebpackPlugin({

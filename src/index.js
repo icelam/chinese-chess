@@ -2,6 +2,7 @@
 import 'core-js/stable';
 
 // styles
+import 'dialog-polyfill/dialog-polyfill.css';
 import '@styles/app.scss';
 
 // scripts

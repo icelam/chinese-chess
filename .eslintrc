@@ -13,8 +13,7 @@
       {
         "webpack": {
           "config": "./webpack/webpack.base.conf.js"
-        },
-        "extensions": [".js"]
+        }
       }
     ]
   },

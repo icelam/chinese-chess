@@ -1,57 +1,69 @@
+//- mixins
+include ../mixins/checkbox
+include ../mixins/modal
+
 h1.title 中國象棋
+
+#subheader
+  #currentLevel 電腦水平：入門
+  .button-group
+    +modal(id='effect-settings')
+      +slot('title').
+        遊戲設定
+
+      +slot('body')
+        #gameOptions
+          +checkbox(id="animatedCheckbox" label="開啟行棋動畫")
+          +checkbox(id="soundEnabledCheckbox" label="開啟音效")
+
+      +slot('okText').
+        儲存
+      +slot('cancelText').
+        取消
+
+    +modal(id='chessboard-settings')
+      +slot('title').
+        棋局設定
+
+      +slot('body')
+        .fieldset
+          .field
+            .field-label 誰先走
+            select.select(id="selMoveMode" size="4")
+              option(selected value="0") 我先走
+              option(value="1") 電腦先走
+              option(value="2") 不用電腦
+
+          .field
+            .field-label 先走讓子
+            select.select(id="selHandicap" size="4")
+              option(selected value="0") 不讓子
+              option(value="1") 讓左馬
+              option(value="2") 讓雙馬
+              option(value="3") 讓九子
+
+          .field
+            .field-label 電腦水平
+            select.select(id="selLevel" size="4")
+              option(selected value="0") 入門
+              option(value="1") 業餘
+              option(value="2") 專業
+
+      +slot('okText').
+        儲存設定並重新開始
+      +slot('cancelText').
+        取消
 
 #main
   #responsiveContainer
     #chessboard
 
   #controls
-    button.plain-button(id="retractButton") 悔棋
-    button.plain-button(id="restartButton") 重新開始
+    button.button.button--plain(id="retractButton") 悔棋
+    button.button.button--plain(id="restartButton") 重新開始
 
-  #gameOptions
-    h2.subtitle
-      span 遊戲設定
+  h2.subtitle
+    span 行棋記錄
 
-    label.checkbox(for="chkAnimated") 棋子移動動畫
-      input(type="checkbox" class="checkbox" id="chkAnimated" checked)
-      span.checkmark
-
-    label.checkbox(for="chkSound") 遊戲音效
-      input(type="checkbox" class="checkbox" id="chkSound" checked)
-      span.checkmark
-
-  #settings
-    h2.subtitle
-      span 棋局設定
-
-    .fieldset
-      .field
-        .field-label 誰先走
-        select(id="selMoveMode" size="4")
-          option(selected value="0") 我先走
-          option(value="1") 電腦先走
-          option(value="2") 不用電腦
-
-      .field
-        .field-label 先走讓子
-        select(id="selHandicap" size="4")
-          option(selected value="0") 不讓子
-          option(value="1") 讓左馬
-          option(value="2") 讓雙馬
-          option(value="3") 讓九子
-
-      .field
-        .field-label 電腦水平
-        select(id="selLevel" size="4")
-          option(selected value="0") 入門
-          option(value="1") 業餘
-          option(value="2") 專業
-
-    button.button(id="saveSettingButton") 儲存設定並重新開始
-
-  #history
-    h2.subtitle
-      span 記錄
-
-    select(id="selMoveList" size="10")
-      option(selected value="0") === 開始 ===
+  select.select(id="selMoveList" size="10")
+    option(selected value="0") === 開始 ===

@@ -52,8 +52,4 @@ label.checkbox {
   input[type='checkbox']:checked ~ .checkmark:after {
     display: block;
   }
-
-  & + & {
-    margin-left: 2rem;
-  }
 }

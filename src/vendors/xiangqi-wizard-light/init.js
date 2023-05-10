@@ -30,42 +30,42 @@ board.onAddMove = function () {
   var text = (board.pos.sdPlayer == 0 ? space : counter) + move2Iccs(board.mvLast);
   var value = "" + board.mvLast;
   try {
-    selMoveList.add(createOption(text, value, false));
+    moveListSelect.add(createOption(text, value, false));
   } catch (e) {
-    selMoveList.add(createOption(text, value, true));
+    moveListSelect.add(createOption(text, value, true));
   }
-  selMoveList.scrollTop = selMoveList.scrollHeight;
+  moveListSelect.scrollTop = moveListSelect.scrollHeight;
 };
 
-function level_change() {
-  board.millis = Math.pow(10, selLevel.selectedIndex + 1);
+function handleLevelChange() {
+  board.millis = Math.pow(10, levelSelect.selectedIndex + 1);
 }
 
-function restart_click() {
-  selMoveList.options.length = 1;
-  selMoveList.selectedIndex = 0;
-  board.computer = 1 - selMoveMode.selectedIndex;
-  board.restart(STARTUP_FEN[selHandicap.selectedIndex]);
-  board.millis = Math.pow(10, selLevel.selectedIndex + 1);
-  currentLevel.innerHTML = "電腦水平：" + ["入門", "業餘", "專業"][selLevel.selectedIndex];
+function handleRestart() {
+  moveListSelect.options.length = 1;
+  moveListSelect.selectedIndex = 0;
+  board.computer = 1 - moveModeSelect.selectedIndex;
+  board.restart(STARTUP_FEN[handicapSelect.selectedIndex]);
+  board.millis = Math.pow(10, levelSelect.selectedIndex + 1);
+  currentLevel.innerHTML = "電腦水平：" + ["入門", "業餘", "專業"][levelSelect.selectedIndex];
 }
 
-function retract_click() {
-  for (var i = board.pos.mvList.length; i < selMoveList.options.length; i++) {
-    board.pos.makeMove(parseInt(selMoveList.options[i].value));
+function handleRetract() {
+  for (var i = board.pos.mvList.length; i < moveListSelect.options.length; i++) {
+    board.pos.makeMove(parseInt(moveListSelect.options[i].value));
   }
   board.retract();
-  selMoveList.options.length = board.pos.mvList.length;
-  selMoveList.selectedIndex = selMoveList.options.length - 1;
+  moveListSelect.options.length = board.pos.mvList.length;
+  moveListSelect.selectedIndex = moveListSelect.options.length - 1;
 }
 
-function moveList_change() {
+function onMoveListChange() {
   if (board.result == RESULT_UNKNOWN) {
-    selMoveList.selectedIndex = selMoveList.options.length - 1;
+    moveListSelect.selectedIndex = moveListSelect.options.length - 1;
     return;
   }
   var from = board.pos.mvList.length;
-  var to = selMoveList.selectedIndex;
+  var to = moveListSelect.selectedIndex;
   if (from == to + 1) {
     return;
   }
@@ -75,24 +75,24 @@ function moveList_change() {
     }
   } else {
     for (var i = from; i <= to; i++) {
-      board.pos.makeMove(parseInt(selMoveList.options[i].value));
+      board.pos.makeMove(parseInt(moveListSelect.options[i].value));
     }
   }
   board.flushBoard();
 }
 
-function set_enable_animation(value) {
+function setEnableAnimation(value) {
   board.animated = value;
 }
 
-function set_enable_sound(value) {
+function setEnableSound(value) {
   board.setSound(value);
 }
 
 restartButton.addEventListener('click', () => {
   if (confirm("棋局將會被重設。")) {
-    restart_click();
+    handleRestart();
   }
 });
-retractButton.addEventListener('click', retract_click);
-selMoveList.addEventListener('change', moveList_change);
+retractButton.addEventListener('click', handleRetract);
+moveListSelect.addEventListener('change', onMoveListChange);

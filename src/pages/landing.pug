@@ -7,7 +7,7 @@ h1.title 中國象棋
 #subheader
   #currentLevel 電腦水平：入門
   .button-group
-    +modal(id='effect-settings')
+    +modal(id='effectSettings')
       +slot('title').
         遊戲設定
 
@@ -21,7 +21,7 @@ h1.title 中國象棋
       +slot('cancelText').
         取消
 
-    +modal(id='chessboard-settings')
+    +modal(id='chessboardSettings')
       +slot('title').
         棋局設定
 
@@ -29,14 +29,14 @@ h1.title 中國象棋
         .fieldset
           .field
             .field-label 誰先走
-            select.select(id="selMoveMode" size="4")
+            select.select(id="moveModeSelect" size="4")
               option(selected value="0") 我先走
               option(value="1") 電腦先走
               option(value="2") 不用電腦
 
           .field
             .field-label 先走讓子
-            select.select(id="selHandicap" size="4")
+            select.select(id="handicapSelect" size="4")
               option(selected value="0") 不讓子
               option(value="1") 讓左馬
               option(value="2") 讓雙馬
@@ -44,7 +44,7 @@ h1.title 中國象棋
 
           .field
             .field-label 電腦水平
-            select.select(id="selLevel" size="4")
+            select.select(id="levelSelect" size="4")
               option(selected value="0") 入門
               option(value="1") 業餘
               option(value="2") 專業
@@ -65,5 +65,5 @@ h1.title 中國象棋
   h2.subtitle
     span 行棋記錄
 
-  select.select(id="selMoveList" size="10")
+  select.select(id="moveListSelect" size="10")
     option(selected value="0") === 開始 ===

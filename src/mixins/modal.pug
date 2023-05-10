@@ -6,13 +6,13 @@ mixin modal(id)
 
   block
 
-  button(id=attributes['id']+"-button" class="button button--default button--small")
+  button(id=attributes['id']+"Button" class="button button--default button--small")
     if slots['title']
       - slots['title']();
     else
       | Open Modal
 
-  dialog.modal(id=attributes['id']+"-modal")
+  dialog.modal(id=attributes['id']+"Modal")
     if slots['title']
       h2.subtitle.modal__title
         span
@@ -23,7 +23,7 @@ mixin modal(id)
         - slots['body']();
 
     .modal__footer
-      button.button.button--default(id=attributes['id']+"-modal-ok-button")
+      button.button.button--default(id=attributes['id']+"ModalOkButton")
         - slots['okText']();
-      button.button.button--default(id=attributes['id']+"-modal-cancel-button")
+      button.button.button--default(id=attributes['id']+"ModalCancelButton")
         - slots['cancelText']();

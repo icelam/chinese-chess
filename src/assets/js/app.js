@@ -1,4 +1,4 @@
-/* global BOARD_WIDTH, BOARD_HEIGHT, restart_click, set_enable_sound, set_enable_animation */
+/* global BOARD_WIDTH, BOARD_HEIGHT, handleRestart, setEnableSound, setEnableAnimation */
 import dialogPolyfill from 'dialog-polyfill';
 
 // Import vendor files using raw loader configured in webpack
@@ -49,14 +49,14 @@ window.addEventListener('resize', debounce(resizeChessboard, 250));
 resizeChessboard();
 
 // Chessboard Settings
-const chessboardSettingsButton = document.getElementById('chessboard-settings-button');
-const chessboardSettingsModal = document.getElementById('chessboard-settings-modal');
-const chessboardSettingsModalOklButton = document.getElementById('chessboard-settings-modal-ok-button');
-const chessboardSettingsModalCancelButton = document.getElementById('chessboard-settings-modal-cancel-button');
+const chessboardSettingsButton = document.getElementById('chessboardSettingsButton');
+const chessboardSettingsModal = document.getElementById('chessboardSettingsModal');
+const chessboardSettingsModalOklButton = document.getElementById('chessboardSettingsModalOkButton');
+const chessboardSettingsModalCancelButton = document.getElementById('chessboardSettingsModalCancelButton');
 
-const moveModeSelect = document.getElementById('selMoveMode');
-const handicapSelect = document.getElementById('selHandicap');
-const levelSelect = document.getElementById('selLevel');
+const moveModeSelect = document.getElementById('moveModeSelect');
+const handicapSelect = document.getElementById('handicapSelect');
+const levelSelect = document.getElementById('levelSelect');
 
 let previousMoveModeIndex = 0;
 let previousHandicapIndex = 0;
@@ -80,15 +80,15 @@ chessboardSettingsModalOklButton.addEventListener('click', () => {
   previousMoveModeIndex = moveModeSelect.selectedIndex;
   previousHandicapIndex = handicapSelect.selectedIndex;
   previousLevelIndex = levelSelect.selectedIndex;
-  restart_click();
+  handleRestart();
   chessboardSettingsModal.close();
 });
 
 // Effect Settings
-const effectSettingsButton = document.getElementById('effect-settings-button');
-const effectSettingsModal = document.getElementById('effect-settings-modal');
-const effectSettingsModalOklButton = document.getElementById('effect-settings-modal-ok-button');
-const effectSettingsModalCancelButton = document.getElementById('effect-settings-modal-cancel-button');
+const effectSettingsButton = document.getElementById('effectSettingsButton');
+const effectSettingsModal = document.getElementById('effectSettingsModal');
+const effectSettingsModalOklButton = document.getElementById('effectSettingsModalOkButton');
+const effectSettingsModalCancelButton = document.getElementById('effectSettingsModalCancelButton');
 
 const animatedCheckbox = document.getElementById('animatedCheckbox');
 const soundEnabledCheckbox = document.getElementById('soundEnabledCheckbox');
@@ -111,7 +111,7 @@ effectSettingsModalCancelButton.addEventListener('click', () => {
 effectSettingsModalOklButton.addEventListener('click', () => {
   wasAnimated = animatedCheckbox.checked;
   wasSoundEnabled = soundEnabledCheckbox.checked;
-  set_enable_animation(animatedCheckbox.checked);
-  set_enable_sound(soundEnabledCheckbox.checked);
+  setEnableAnimation(animatedCheckbox.checked);
+  setEnableSound(soundEnabledCheckbox.checked);
   effectSettingsModal.close();
 });
